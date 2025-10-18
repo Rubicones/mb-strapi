@@ -12,7 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "Name": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "Description": {
       "type": "text"
@@ -41,15 +42,21 @@
         "none"
       ]
     },
-    "Programs": {
-      "type": "component",
-      "component": "project.program",
-      "repeatable": true
-    },
     "Media": {
       "type": "component",
       "component": "project.media",
       "repeatable": true
+    },
+    "Programs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::program.program"
+    },
+    "SplineLink": {
+      "type": "text"
+    },
+    "ytLink": {
+      "type": "text"
     }
   }
 }
