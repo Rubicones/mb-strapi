@@ -507,6 +507,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Category: Schema.Attribute.Enumeration<['c_3D', 'c_2D', 'c_Craft']>;
     Content: Schema.Attribute.Enumeration<['youtube', 'spline', 'none']>;
     Cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;

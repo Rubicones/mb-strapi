@@ -57,6 +57,14 @@
     },
     "ytLink": {
       "type": "text"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "c_3D",
+        "c_2D",
+        "c_Craft"
+      ]
     }
   }
 }
