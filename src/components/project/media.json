@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_project_media",
+  "info": {
+    "displayName": "Media",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Comment": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
