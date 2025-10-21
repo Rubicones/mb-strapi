@@ -65,6 +65,19 @@
         "c_2D",
         "c_Craft"
       ]
+    },
+    "nextProject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "prevProject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "isHighlighted": {
+      "type": "boolean"
     }
   }
 }

@@ -515,6 +515,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Date: Schema.Attribute.Date;
     Description: Schema.Attribute.Text;
+    isHighlighted: Schema.Attribute.Boolean;
     isPosted: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -524,6 +525,8 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Media: Schema.Attribute.Component<'project.media', true>;
     Name: Schema.Attribute.String;
+    nextProject: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
+    prevProject: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
     Programs: Schema.Attribute.Relation<'oneToMany', 'api::program.program'>;
     publishedAt: Schema.Attribute.DateTime;
     SplineLink: Schema.Attribute.Text;
