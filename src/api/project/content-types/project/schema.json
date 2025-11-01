@@ -78,6 +78,13 @@
     },
     "isHighlighted": {
       "type": "boolean"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "personal",
+        "comercial"
+      ]
     }
   }
 }

@@ -530,6 +530,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     Programs: Schema.Attribute.Relation<'oneToMany', 'api::program.program'>;
     publishedAt: Schema.Attribute.DateTime;
     SplineLink: Schema.Attribute.Text;
+    type: Schema.Attribute.Enumeration<['personal', 'comercial']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
