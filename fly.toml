@@ -1,0 +1,38 @@
+# fly.toml app configuration file generated for mb-portfolio on 2025-11-02T16:44:55+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'mb-portfolio'
+primary_region = 'fra'
+
+[build]
+
+[env]
+  HOST = "0.0.0.0"
+  PORT = "1337"
+  NODE_ENV = "production"
+  DATABASE_CLIENT = "sqlite"
+  DATABASE_FILENAME = "/data/data.db"
+  PUBLIC_URL = "https://mb-portfolio.fly.dev"
+  IS_PROXIED = "true"
+
+[[mounts]]
+  source = 'data'
+  destination = '/data'
+  auto_extend_size_threshold = 80
+  auto_extend_size_increment = '1GB'
+  auto_extend_size_limit = '10GB'
+
+[http_service]
+  internal_port = 1337
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
